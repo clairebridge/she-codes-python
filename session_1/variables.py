@@ -20,7 +20,7 @@ height = 170
 # print(f"My height is {height/100} in m.")
 
 #float
-weight = 68.2
+weight = 68.2 
 # print(type(weight))
 # print(f"My weight is {weight*2.1} in lbs.")
 
@@ -56,3 +56,5 @@ distance = "5000"
 # print(f"Hello {user_name}, you are {int(user_height)/100}m tall!")
 
 #Q5: Is the input function a statement or an expression?
+
+#Test
