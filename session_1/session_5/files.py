@@ -12,11 +12,15 @@ import csv
 #     csv_writer = csv.writer(my_file)
 #     csv_writer.writerow(["hello"])
 
-population = []
 
-with open(file="cats.csv", mode = "w") as my_file:
-    csv_reader = csv.reader(my_file)
+colour = []
+
+with open(file="colours_20_simple.csv", mode="r", encoding="utf-8") as my_file:
+    csv_reader = csv.reader(my_file, delimiter=",")
     for line in csv_reader:
-        population.append (line)
-for age_group in population:
-    print(f"{age_group[0]} {age_group[1]}")
+        colour.append(line)
+
+print(colour[0])
+
+# for age_group in population:
+#     print(f"{age_group[0]} * {age_group[1]}")
