@@ -42,36 +42,50 @@
 
 
 #Q1
-# def get_integer():
-#     prompt = input("Could I please have an integer?")
-#     print (prompt)
-#     user_input = int(prompt)
-#     print(f"So your integer is {user_input}? Thanks!")
-    
-# get_integer()
+# def get_integer(prompt):
+#     response = input(prompt)
+#     return int(response)
+
+# prompt = "Could I please have an integer?"
+# user_input = get_integer("Could I please have an integer PLEASE?")
+# print(f"So your integer is {user_input}? Thanks!")
+
 
 #Q2
 # def celcius_convert(current_temp):
-#     convert = ((current_temp - 30) /2) 
-#     print ("The temperature is",convert,"degrees in celcius.")
+#     convert = ((current_temp - 32) * (5/9)) 
+#     print(f"The temperature is currently {convert}")
+#     return convert
 
-# celcius_convert(350)
+# assert celcius_convert(32) == 0.0
+# assert celcius_convert(0) == -17.77777777777778
+# assert celcius_convert(350) == 176.66666666666669
 
 # Q3
-# def even_or_odd(random_number):
+# def is_even(random_number):
 #     if (random_number % 2) == 0:  #% symbol = Modulo =  the remainder after dividing one number by another. So therefore, any number divided by 2, if remainder is 0, the number is even. More than one leftover, is odd.
-#         print ("The number is even!")
+#         return True 
 #     else:
-#         print ("The number is odd!")
+#         return False
 
-# even_or_odd(13)
+# assert not is_even(13)
+# assert is_even(26)
+# assert is_even(0)
 
-#Q4
-# def total_cost(price, num_units):
-#     total = float(price * num_units)
-#     formatted_total = ("{:.2f}".format(total))
-#     print ("$",str(formatted_total))
+# if is_even(13):
+#     print("The number is even!")
+# else:
+#     print("The number is odd!")
 
-# total_cost(12.67,2)
+#Q478
+def total_cost(price, num_units):
+    total = float(price * num_units)
+    formatted_total = ("{:.2f}".format(total))
+    return (f"${str(formatted_total)}")
+
+print(total_cost(4.25,3))
+assert total_cost(4.25,3) == "$12.75"
+assert total_cost(3.79,1) == "$3.79"
+assert total_cost(1.49,7) == "$10.43"
 
 
